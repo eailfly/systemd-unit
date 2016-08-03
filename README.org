@@ -1,0 +1,7 @@
+* Systemd-units
+
+My systemd user layer units
+
+Path: ~/.config/systemd/user
+
+Useage: systemctl --user {start|stop|enable|disable} units.service
