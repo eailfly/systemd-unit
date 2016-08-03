@@ -1,0 +1,13 @@
+[Unit]
+Description=Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/aria2c --conf-path=/home/eailfly/.aria2/aria2.conf
+
+# allow MPD to use real-time priority 50
+; LimitRTPRIO=50
+; LimitRTTIME=infinity
+
+[Install]
+WantedBy=default.target
