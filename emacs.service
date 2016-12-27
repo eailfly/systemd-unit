@@ -1,0 +1,13 @@
+[Unit]
+Description=Emacs: the extensible, self-documenting text editor
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/emacs --daemon
+ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
+Restart=always
+#Environment="DISPLAY=:0" "SSH_AUTH_SOCK=/home/eailfly/.gnupg/S.gpg-agent.ssh"
+Environment="DISPLAY=:0"
+
+[Install]
+WantedBy=default.target
